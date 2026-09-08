@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('kode_barang')->unique();
             $table->string('nama_barang');
+            $table->string('kategori');
             $table->integer('stok');
+            $table->string('satuan');
             $table->bigInteger('harga_satuan');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }
